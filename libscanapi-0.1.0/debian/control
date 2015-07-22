@@ -1,0 +1,22 @@
+Source: libscanapi
+Priority: optional
+Maintainer: imac <imac@unknown>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Section: libs
+Homepage: www.smartmatic.com
+#Vcs-Git: https://github.com/pablotrujillo/fingerprint-qtapp
+
+Package: libscanapi-dev
+Section: libdevel
+Architecture: i386
+Depends: libscanapi (= ${binary:Version})
+Description: sample library
+ test library deb package
+
+Package: libscanapi
+Section: libs
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: sample library
+ test library deb package

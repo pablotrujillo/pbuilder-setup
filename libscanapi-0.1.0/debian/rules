@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@ 
+
+#Configure and compile library from the
+#source code and install it into temporary location
+install: 
+	build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+
+	
+# Build architecture-dependent files here.
+binary-arch: 
+	build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs ChangeLog
+	dh_installdocs
+	dh_installexamples
+	dh_install --sourcedir debian/tmp
+
+override_dh_usrlocal:
