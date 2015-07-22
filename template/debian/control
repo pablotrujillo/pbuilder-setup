@@ -1,0 +1,22 @@
+Source: <packagename>
+Priority: optional
+Maintainer: imac <imac@unknown>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Section: libs
+Homepage: <homepage>
+#Vcs-Git: https://github.com/<unknown>
+
+Package: <packagename>-dev
+Section: libdevel
+Architecture: i386
+Depends: <packagename> (= ${binary:Version})
+Description: sample library
+ test library deb package
+
+Package: <packagename>
+Section: <section>
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: sample library
+ test library deb package
