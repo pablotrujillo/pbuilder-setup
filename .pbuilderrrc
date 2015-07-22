@@ -1,0 +1,8 @@
+BASETGZ=$HOME/pbuilder/base.tgz
+BUILDPLACE=$HOME/pbuilder/build/
+BUILDRESULT=$HOME/pbuilder/result/
+DEBEMAIL='mailname <mailname@email.*>'
+BUILDUSERNAME=name
+AUTO_DEBSIGN=no
+APTCACHEHARDLINK=no
+DEBUILTOPTS="-b"
