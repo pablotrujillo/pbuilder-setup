@@ -12,6 +12,11 @@ create base.tar.gz, using panama mirror
 
 sudo pbuilder --create --mirror "http://pa.archive.ubuntu.com/ubuntu"
 
+more specific:
+
+sudo ARCH=i386 pbuilder create --debootstrapopts --arch=i386 --debootstrapopts --variant=buildd --debootstrapopts --keyring=/etc/apt/trusted.gpg --mirror "http://pa.archive.ubuntu.com/ubuntu/"
+
+
 update and install package in chroot (keep changes):
 
 sudo pbuilder --login --safe-after-login 
