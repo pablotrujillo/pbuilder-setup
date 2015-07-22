@@ -8,7 +8,8 @@ gedit $HOME/.pbuilderrc
 
 
 
-create base.tar.gz, using panama mirror:
+create base.tar.gz, using panama mirror
+
 sudo pbuilder --create --mirror "http://pa.archive.ubuntu.com/ubuntu"
 
 
